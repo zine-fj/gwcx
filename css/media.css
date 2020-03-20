@@ -508,7 +508,7 @@
         font-size: 16px;
     }
     .news-two .list li .text .des {
-        display: none;
+        /* display: none; */
     }
     .news-two .list li .text a.t {
         font-size: 18px;
@@ -972,7 +972,7 @@
         background-size: 100% auto;
         transform: scale(1);
         -webkit-transform: scale(1);
-        /*Safari å’Œ Chrome*/
+        /*Safari 和 Chrome*/
         -moz-transform: scale(1);
         /*Firefox*/
         -ms-transform: scale(1);
