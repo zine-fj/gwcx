@@ -2,6 +2,13 @@
     display: table-cell;
     vertical-align: middle;
 }
+.header-menu {
+    background-color: #015c61;
+    
+}
+.header-menu .logo a,.header-menu .header-menu-list a {
+    color: #fff;
+}
 
 @media screen and (max-width: 1480px) {
     .home-one .text img {
