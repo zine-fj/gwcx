@@ -68,22 +68,23 @@
             -ms-filter: blur(6px);
             -moz-filter: blur(6px);
         }
+
         /* 业务板块 */
         .home-fi {
             background-image: url(/images/1.jpg);
         }
+
         /* 企业文化 */
-        .home-two-4 .picbg {
-        }
+        .home-two-4 .picbg {}
+
         /* 关于我们 */
-        .home-two-5 .picbg {
-        }
+        .home-two-5 .picbg {}
+
         /* 加入我们 */
-        .home-two-6 .picbg {
-        }
+        .home-two-6 .picbg {}
+
         /* 企业党建 */
-        .home-two-7 .picbg {
-        }
+        .home-two-7 .picbg {}
     </style>
 
 </head>
@@ -119,7 +120,7 @@
                                 <li>
                                     <a href="html/wenhua"><span class="">企业文化</span></a>
                                 </li>
-                                
+
                                 <li>
                                     <a href="html/joinus.html"><span class="">加入我们</span></a>
                                 </li>
@@ -272,8 +273,9 @@
     <div id="dowebok">
         <div class="section home-one fp-auto-height">
             <div bg-video="">
-                <video src='images/index.mp4' width="100%" height="100%" autoplay muted="muted" loop=""
-                    cue-before:none=""></video>
+                <video id="video" width="100%" height="100%" controls name="media" muted autoplay loop>
+                    <source type="video/mp4" src="images/index.mp4">
+                </video>
             </div>
             <div class="text op0">
                 <p style="font-size: 34px;">国网城乡（北京）建设集团有限公司</p>
@@ -386,7 +388,7 @@
             </div>
         </div>
 
-        
+
         <!-- 企业党建 -->
         <div class="section home-two home-two-7">
             <div class="picbg"></div>
@@ -395,48 +397,10 @@
                 <a href="html/dangjian.html"><span>了解更多&gt;</span></a>
             </div>
         </div>
-        
+
 
         <div class="section footer fp-auto-height">
-            <div class="box">
-                <div class="top-logo" style="text-align: center;">
-                    国网城乡（北京）建设集团有限公司
-                    <div class="copyright"
-                        style="width: 80%;display: flex;justify-content: space-around;margin: 20px auto;">
-                        <div class="address">
-                            <p>地址：北京市丰台区方庄路2号院国家电网院内 &nbsp;</p>
-                        </div>
-                        <div class="phone">
-                            <p>电话：010-59562850 15801496969</p>
-                            <p>传真：010-59562888</p>
-                        </div>
-                    </div>
-                    <a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备20011906号-1</a>  
-                    京公网安备<span>11010602007135</span>号 
-                </div>
-
-            </div>
-
-
-            <script>
-                window._bd_share_config = {
-                    "common": {
-                        "bdSnsKey": {},
-                        "bdText": "",
-                        "bdMini": "2",
-                        "bdMiniList": false,
-                        "bdPic": "",
-                        "bdStyle": "0",
-                        "bdSize": "24"
-                    },
-                    "share": {}
-                };
-                with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src =
-                    'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-
-                        new Date() / 36e5)];
-            </script>
-
-            <div class="cl"></div>
+            <div class="footer-cont"></div>
         </div>
     </div>
     <script src="js/jquery-3.4.1.min.js"></script>
@@ -450,6 +414,8 @@
     <script src="js/scrollReveal.js"></script>
     <script>
         $(function () {
+            $('.footer-cont').load("html/public/footer.html");
+
             var $mlNav = $('.header-menu');
             $('#dowebok').fullpage({
                 verticalCentered: true,
@@ -458,6 +424,7 @@
                 afterLoad: function (anchorLink, index) {
                     console.log(index)
                     if (index == 1) {
+
                         $('.home-one .text').delay(100).removeClass('fadeOutUp').addClass(
                             'animated fadeInDown');
                         $mlNav.animate({
@@ -542,13 +509,13 @@
                         $('.home-two-7 .text').delay(1000).removeClass('fadeOutRight').addClass(
                             'animated fadeInRight')
                     }
-                    
+
                 },
                 onLeave: function (index, nextIndex, direction) {
                     if (index == 1) {
                         $('.home-one .text').delay(1000).addClass('fadeOutUp');
                     }
-                   
+
                     if (index == 2) {
                         $('.home-two .t').delay(100).addClass('fadeOutUp')
                         $('.home-two .subt').delay(100).addClass('fadeOutUp')
@@ -600,7 +567,7 @@
                         $('.home-two-7 .text').delay(1000).addClass('fadeOutRight')
 
                     }
-                   
+
                     // if (index == 6) {
                     //     $('.home-s .t').delay(100).addClass('fadeOutUp')
                     //     $('.home-s .subt').delay(100).addClass('fadeOutUp')

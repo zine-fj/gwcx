@@ -320,45 +320,7 @@
     </div>
 
     <div class="footer">
-        <div class="box">
-            <div class="top-logo" style="text-align: center;">
-                国网城乡（北京）建设集团有限公司
-                <div class="copyright"
-                    style="width: 80%;display: flex;justify-content: space-around;margin: 20px auto;">
-                    <div class="address">
-                        <p>地址：北京市丰台区方庄路2号院国家电网院内 &nbsp;</p>
-                    </div>
-                    <div class="phone">
-                        <p>电话：010-59562850 15801496969</p>
-                        <p>传真：010-59562888</p>
-                    </div>
-                </div>
-                <a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备20011906号-1</a>  
-                京公网安备<span>11010602007135</span>号 
-            </div>
-
-        </div>
-
-
-        <script>
-            window._bd_share_config = {
-                "common": {
-                    "bdSnsKey": {},
-                    "bdText": "",
-                    "bdMini": "2",
-                    "bdMiniList": false,
-                    "bdPic": "",
-                    "bdStyle": "0",
-                    "bdSize": "24"
-                },
-                "share": {}
-            };
-            with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src =
-                'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() /
-                    36e5)];
-        </script>
-
-        <div class="cl"></div>
+        <div class="footer-cont"></div>
     </div>
 
     <script src="../js/scrollReveal.js"></script>
@@ -370,26 +332,9 @@
                 move: '50px'
             });
         })();
-    </script>
-    <script src="../js/fixedScroll.js"></script>
-    <script>
-        $(".navfloat").fixedScroll({
-            offset: 123,
-            navEls: $(".nav-item"),
-            hookEls: $('.hook-item'),
-            hookOffset: 176,
-        })
+        $('.footer-cont').load("public/footer.html");
     </script>
 
 </body>
 
 </html>
-
-<link href="../css/glightbox.css" type="text/css" rel="stylesheet" />
-<script src="../js/glightbox.min.js"></script>
-<script>
-    var lightbox = GLightbox();
-    var lightboxDescription = GLightbox({
-        selector: 'glightbox2'
-    });
-</script>

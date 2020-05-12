@@ -1015,6 +1015,10 @@
     }
     .footer .top-logo {
         text-align: center;
+        font-size: 13px;
+    }
+    .footer .box {
+        padding-top: 0;
     }
     .footer .footer-ewm {
         width: 100%;
